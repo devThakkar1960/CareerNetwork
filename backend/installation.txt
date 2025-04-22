@@ -1,0 +1,28 @@
+1) Backend...
+-> npm init
+-> npm i express mongoose nodemon jsonwebtoken bcryptjs cookie-parser dotenv nodemailer
+
+2) Frontend...
+https://ui.shadcn.com/docs/installation/vite
+===> Changes...
+2. npm install -D tailwindcss@3.4.1 postcss autoprefixer
+  npm tailwindcss init -p
+
+3. jsconfig.json instead of tsconfig.json 
+in jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
+
+Skip 4 and 5 direct run 6.
+after 6..
+typescript - no
+style to use - default
+color like to use as a base - slate
+global file - src/index.css
+CSS variables for colors - yes
