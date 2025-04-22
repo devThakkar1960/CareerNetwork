@@ -216,7 +216,21 @@ export const forgotPassword = async(req, res) => {
             from: "hari1837pandey@gmail.com",
             to: email,
             subject: "Password Reset Request",
-            text: `Click on this link to generate new password ${process.env.CLIENT_URL}/resetpassword/${token}`,
+            text: "",
+html: `
+  <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
+    <h2 style="color: #4CAF50;">🔐 Reset Your CareerNetwork Password</h2>
+    <p>Hi there,</p>
+    <p>We received a request to reset your password. Click the button below to create a new one:</p>
+    <a href="https://careernetwork-6d6a.onrender.com/resetpassword/${token}" 
+       style="display: inline-block; padding: 10px 20px; margin: 15px 0; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
+      Reset Password
+    </a>
+    <p>If you did not request a password reset, please ignore this email.</p>
+    <p style="margin-top: 30px;">Thanks,<br>The CareerNetwork Team</p>
+  </div>
+`
+
         };
 
         await transporter.sendMail(receiver);
